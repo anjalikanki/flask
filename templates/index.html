@@ -1,0 +1,35 @@
+<h1> Hello World </h1>
+
+    <p> Hey! How are you?</p>
+
+    <p>My name is {{f_name}} </p>
+
+    <p> {{stuff}} </p>
+
+    <p> {{stuff|safe}} </p>
+
+    <!--Striptags remove the html elements completely-->
+    <p>{{some_other_stuff|striptags}}</p>
+
+    <p>{{some_other_stuff|safe}}</p>
+
+    <!--Title makes every starting letter capital-->
+    <p>{{stuff|title}}</p>
+
+    <h3>Fav fictional chars</h3>
+    <!--Loops using jinja-->
+    {% for char in best_fictional_chars %}
+        {% if char==7 %}
+            {{ char+100 }} <br/>
+        {% else %}
+            {{ char }} <br/>
+        {% endif %}
+    {% endfor %}
+
+    <br/> <br/>
+    <!--For accessing individual items in the list-->
+    {{best_fictional_chars.2}}
+
+    <br/>
+    {{best_fictional_chars.7 + 10}}
+
